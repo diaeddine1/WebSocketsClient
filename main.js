@@ -1,5 +1,5 @@
 const receivedEvents=new Set()
-const serverIp = `ws://newwebsocketserver.onrender.com`;  //Change with your hosted url or Localhost
+const serverIp = `wss://newwebsocketserver.onrender.com`;  //Change with your hosted url or Localhost
 const websocket = new WebSocket(serverIp); // Create WebSocket connection
 
 websocket.addEventListener("open", () => {
