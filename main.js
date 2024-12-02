@@ -8,7 +8,7 @@ function animation(){
 
   document.addEventListener("DOMContentLoaded",(event)=>{
     console.log("document Loaded")
-    alert.style.animation  = "slidein 1s forwards"
+    alert.style.animation  = "slidein 0.5s forwards"
   })
 
   close.addEventListener("click",(event)=>{
