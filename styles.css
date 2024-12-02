@@ -84,3 +84,64 @@
     }
   }
   
+#alert{
+  color: white;
+  min-width: fit-content;
+  width: 280px;
+  background-color: #0ba118;
+  position: absolute;
+  bottom: 10%;
+  left: -22%;
+  padding: 10px;
+  border-radius: 5px;
+}
+#connection{
+  width: 300px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+}
+#close{
+  color: black;
+  position: absolute;
+  font-size: 15px;
+  top: -10%;
+  right: -1%;
+  padding: 5px;
+}
+#close:hover{
+  cursor: pointer;
+}
+
+@keyframes slidein{
+  from {
+    left : -22%;
+
+  }
+  to {
+    left : 0%
+  }
+}
+
+@keyframes redslide{
+
+  from {
+    left : var(--current-left);
+
+  }
+  to {
+    left : 0%
+  }
+
+}
+
+@keyframes slideback{
+
+  from {
+    left : 0%;
+  }
+  to {
+    left : -22%;
+
+  }
+}

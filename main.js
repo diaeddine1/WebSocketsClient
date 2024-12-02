@@ -1,9 +1,31 @@
+const alert = document.getElementById("alert")
+const connection = document.getElementById("connection")
+const close = document.getElementById("close")
+function animation(){
+  
+ 
+  // alert.style.animationDelay  = "3s"
+
+  document.addEventListener("DOMContentLoaded",(event)=>{
+    console.log("document Loaded")
+    alert.style.animation  = "slidein 1s forwards"
+  })
+
+  close.addEventListener("click",(event)=>{
+    alert.style.animation="slideback 1s forwards"
+  })
+}
+
+animation()
+
 const receivedEvents=new Set()
-const serverIp = `wss://websocket-server-o3sb.onrender.com`;  //Change with your hosted url or Localhost
+const serverIp = `ws://192.168.11.106:8002`;  //Change with your hosted url or Localhost
 const websocket = new WebSocket(serverIp); // Create WebSocket connection
+
 
 websocket.addEventListener("open", () => {
   console.log("WebSocket connection established.");
+  connection.innerText= "Connection Established"
 });
 
 websocket.addEventListener("error", (error) => {
@@ -12,6 +34,14 @@ websocket.addEventListener("error", (error) => {
 
 websocket.addEventListener("close", () => {
   console.log("WebSocket connection closed.");
+  connection.innerText= "Connection Lost"
+  alert.style.backgroundColor ="red"
+  const currentLeft = alert.getBoundingClientRect().left; 
+  //alert.style.animation = ""; // Reset animation to apply new rules
+  alert.style.setProperty('--current-left', `${currentLeft}px`);
+
+  alert.style.animation  = "redslide 0.5s forwards"
+
 });
 
 // Ensure the WebSocket connection is open before sending data
