@@ -59,6 +59,8 @@ function sendMessage(message) {
 websocket.addEventListener("message", ({ data }) => {
   console.log("Notification Received.");
   connection.innerText= "Notification Received"
+  alert.style.animation  = "slidein 0.5s forwards"
+
   const notificationArea = document.getElementById("Notification");
   const imageContainer = document.getElementById("display_image");
   const messageContainer = document.getElementById("receivedMessage");
