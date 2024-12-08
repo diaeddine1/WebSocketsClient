@@ -6,7 +6,7 @@
   }
   
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Poppins", serif;
     background-color: #f9f9f9;
     color: #333;
     display: flex;
@@ -40,7 +40,7 @@
     color: #888;
     display: block;
     margin-bottom: 20px;
-    font-style: italic;
+
   }
   
 
@@ -66,7 +66,7 @@
   
   .date-text {
     color: #888;
-    font-style: italic;
+    
   }
   
   
@@ -102,12 +102,13 @@
   font-family: 'Arial', sans-serif;
 }
 #close{
-  color: black;
+  color: white !important;
   position: absolute;
-  font-size: 15px;
-  top: -10%;
-  right: -1%;
-  padding: 5px;
+  width: 20px;
+  height: 20px;
+  top: 1%;
+  right: 1%;
+  
 }
 #close:hover{
   cursor: pointer;

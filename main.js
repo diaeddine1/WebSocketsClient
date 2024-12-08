@@ -57,6 +57,8 @@ function sendMessage(message) {
 
 // Client-side: Receive messages
 websocket.addEventListener("message", ({ data }) => {
+  console.log("Notification Received.");
+  connection.innerText= "Notification Received"
   const notificationArea = document.getElementById("Notification");
   const imageContainer = document.getElementById("display_image");
   const messageContainer = document.getElementById("receivedMessage");
